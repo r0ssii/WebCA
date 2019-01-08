@@ -1,0 +1,200 @@
+/*basic styles*/
+html, body {
+	margin: 0;
+}
+html {
+	background: 	#E6E6FA;
+}
+body {
+	font: 100% Lato, Helvetica, sans-serif;
+	background: #D8BFD8;
+	width: 80%;
+	margin: 0 auto;
+	padding: 2%;
+	line-height: 1.6;
+}
+article, aside, section, nav, figure, header, footer {
+	display: block;
+}
+h1, h2, h3, h4 {
+	font-weight: normal;
+	font-family: LatoLight, Helvetica, sans-serif;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+	color: #575451;
+	margin: 0;
+	line-height: 1;
+}
+h1 {
+	font-size: 2.6em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+h4 {
+	font: 1.2em Lato, Helvetica, sans-serif;
+	color: black;
+}
+p {
+	margin: 0 0 1em;
+}
+a {
+	color: #77A0B8;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+code {
+	color: red;
+}
+.register-form {
+    line-height: 1.4;
+     /*///////5*/
+    margin-right:-2em;
+}
+.form-group {
+    background:#E8E8E8;
+    margin-bottom: 1em;
+    padding:10px;
+    /*///////4*/
+    margin-right:2em;
+}
+.form-group ul {
+	list-style: none;
+	margin: 0 0 2em;
+	padding: 0;
+}
+.form-group li {
+	margin-bottom: 0.5em;
+}
+.form-group h3 {
+	margin-bottom: 1em;
+}
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+    box-sizing: border-box;
+    padding: 0.6em 0.8em;
+    color: #999;
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+    text-decoration: none;
+    line-height: normal;
+    max-height: 3em;
+}
+.form-fields input[type="text"]:focus,
+.form-fields input[type="tel"]:focus,
+.form-fields input[type="url"]:focus,
+.form-fields input[type="email"]:focus,
+.form-fields input[type="number"]:focus,
+.form-food textarea:focus,
+.form-fields select:focus {
+    color: #333;
+    border: 1px solid #808080;
+    outline: none;
+    background: #f2f2f2;
+}
+.form-food textarea {
+    display: block;
+    box-sizing: border-box;
+    font: 0.9em Lato, Helvetica, sans-serif;
+    width: 90%; /*don't need to make responsive*/
+    height: 6em;
+    overflow: auto;
+    padding: 0.6em 0.8em;
+    color: #999;
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    line-height: normal;
+}
+.register-btn {
+	border-radius: 0px 2px 2px 0px;
+	box-sizing: content-box;
+	background: #FFFF33;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: black;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;
+}
+.register-btn:hover, .register-btn:focus {
+	background: #A0A0A0;
+}
+/*/////////////////////////FLEX IT*/
+/*///////1*/
+.register-form{
+    display:flex;
+    flex-wrap:wrap;
+}
+/*///////2*/
+.form-group {
+    flex: 1 0 300px;
+}
+/*///////3*/
+/*SUBMIT BUTTON*/
+.form-submit{
+    flex:0 0 100%;
+}
+.form-fields li {
+    display:flex;
+    flex-wrap: wrap;
+}
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+    flex: 1 0 230px;
+}
+.form-fields li.error {
+    margin-bottom: 0em;
+}
+.form-fields li.error h5 {
+    flex: 1 0 230px;
+    margin: 0px;
+}
+.form-fields label {
+    flex: 1 0 90px;
+    max-width: 200px;
+}
+.form-skills, .form-workshop{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.form-skills li {
+    width:145px;
+}
+.form-workshop li {
+    flex:1 0 200px;
+}
+/*///////////////////////////////////5*/
+@media (max-width: 400px){
+    body {
+        width:100%;
+        margin:0;
+        padding:0 0 2em;
+    }
+    header, .form-submit{
+        padding:2% 5%;
+    }
+
+    .register-btn {
+     width:75%;
+    }
+}
